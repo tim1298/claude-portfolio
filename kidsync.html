@@ -10,69 +10,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <style>
-/* ── Kidsync-specific summary: 5 columns ── */
+/* ── 5-column summary grid (this page only) ── */
 .summary-grid{grid-template-columns:repeat(5,1fr)}
 @media(max-width:1024px){.summary-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.summary-grid{grid-template-columns:1fr 1fr}}
 
-/* ── Context: logo left, paragraph right — lives inside .read ── */
-.context-row{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-top:20px}
+/* ── Context: NW logo left, paragraph right (inside .read) ── */
+.context-row{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
 .context-row .ctx-badge img{width:120px;height:auto;object-fit:contain}
 @media(max-width:600px){
   .context-row{grid-template-columns:1fr;gap:16px}
   .context-row .ctx-badge img{width:80px}
 }
 
-/* ── Elliot: photo left, callout right — lives inside .read ── */
+/* ── Elliot: portrait photo left, callout right (inside .read) ── */
 .elliot-row{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:stretch;margin:22px 0}
 .elliot-row img{width:100%;height:100%;border-radius:var(--r-sm);object-fit:cover}
 @media(max-width:600px){.elliot-row{grid-template-columns:1fr}}
-
-/* ── Problem column labels — lives inside .read ── */
-.sol-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin:24px 0}
-.sol-col h4{font-size:15.5px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px;color:var(--ink)}
-.sol-col .tag{color:var(--muted);font-weight:500}
-.sol-col p{font-size:15px;color:#44444b;line-height:1.55;margin:0}
-@media(max-width:640px){.sol-cols{grid-template-columns:1fr}}
-
-/* ── Side-by-side figure pairs — aligns with .wrap at 1200px ── */
-.fig-pair{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(20px,3vw,32px);
-  max-width:var(--maxw);
-  margin:40px auto;
-  padding:0 var(--pad);
-  align-items:start;
-}
-.fig-pair figure{margin:0;width:100%}
-.fig-pair figure img{width:100%;border-radius:var(--r-sm)}
-.fig-pair figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.45}
-@media(max-width:760px){.fig-pair{grid-template-columns:1fr;gap:24px}}
-
-/* ── Feature rows: Kidsync phone layout (7fr/5fr split) ── */
-.feature-row{grid-template-columns:7fr 5fr}
-.feature-row.reverse{grid-template-columns:5fr 7fr}
-.feature-row .feature-media{justify-content:flex-end}
-.feature-row.reverse .feature-media{justify-content:flex-start}
-.feature-copy .num{
-  font-family:var(--display);
-  font-size:15px;
-  font-weight:600;
-  color:var(--ink);
-  letter-spacing:.04em;
-  margin-bottom:8px;
-}
-.feature-copy p{max-width:42ch}
-
-/* ── Design process header divider ── */
-.process-heading{border-top:1px solid var(--hair)}
-
-/* ── Breathing room between consecutive figures ── */
-figure.cs-fig + figure.cs-fig,
-figure.cs-fig-wide + figure.cs-fig-wide,
-figure.cs-fig + figure.cs-fig-wide,
-figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
 </style>
 </head>
 <body>
@@ -93,24 +47,22 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
 
 <main>
 
-<!-- ═══════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="cs-hero">
   <div class="read">
     <a href="index.html#work" class="cs-back">← All work</a>
-    <div class="cs-kicker">Healthcare · Mobile-first · Concept</div>
+    <div class="cs-kicker">Concept · Healthcare · Mobile-first</div>
     <h1>Kidsync</h1>
     <p class="sub">A care-management platform that helps families of children with special healthcare needs hand off care safely — and stay protected even from afar.</p>
   </div>
 </section>
 
-<!-- COVER -->
+<!-- COVER IMAGE -->
 <figure class="cs-fig-wide">
   <img src="img/kidsync-cover.png" alt="Kidsync app screens on multiple phones showing the care profile, checklist, community, and calendar features" />
 </figure>
 
-<!-- SUMMARY -->
+<!-- SUMMARY BAND -->
 <div class="wrap">
   <div class="summary">
     <div class="summary-grid">
@@ -118,12 +70,12 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
       <div class="sm"><span class="k">Team</span><span class="v">Cross-disciplinary team of 5</span></div>
       <div class="sm"><span class="k">Duration</span><span class="v">9 months, concept to pitch</span></div>
       <div class="sm"><span class="k">Platform</span><span class="v">Mobile-first iOS app</span></div>
-      <div class="sm"><span class="k">Outcome</span><span class="v">Users asked to pay before it existed; pitched to VC panel</span></div>
+      <div class="sm"><span class="k">Outcome</span><span class="v">Validated demand: users requested it pre-launch; pitched to VC panel</span></div>
     </div>
   </div>
 </div>
 
-<!-- METRICS -->
+<!-- METRIC BAND -->
 <div class="wrap">
   <div class="metric-band">
     <div class="metric-grid">
@@ -134,9 +86,7 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     CONTEXT
-═══════════════════════════════════════════ -->
+<!-- CONTEXT -->
 <section class="cs-section">
   <div class="read">
     <div class="eyebrow-sm">Context</div>
@@ -150,12 +100,10 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     MEET ELLIOT
-═══════════════════════════════════════════ -->
+<!-- ELLIOT / EMOTIONAL HOOK -->
 <section class="cs-section tight">
   <div class="read">
-    <div class="eyebrow-sm">Meet Elliot</div>
+    <div class="eyebrow-sm">Why this problem matters</div>
     <h2>Elliot couldn't breathe</h2>
     <div class="elliot-row">
       <img src="img/kidsync-elliot.jpeg" alt="Elliot, the child whose severe allergic reaction inspired the project" />
@@ -164,264 +112,233 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
         <p>Elliot reached for his babysitter as he gasped for air. He was four, had a severe peanut allergy, and was unintentionally given a Butterfinger. In the panic, his babysitter failed to administer an EpiPen on the way to the ER. He made it just in time. Luckily, he's now a bright eight-year-old. However, that day changed his parents forever.</p>
       </div>
     </div>
+    <p>Every time they have to entrust their child to someone else, the anxiety comes back. And they're not alone.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     PROBLEM
-═══════════════════════════════════════════ -->
+<!-- PROBLEM -->
 <section class="cs-section">
-  <div class="read">
-    <div class="eyebrow-sm">Problem</div>
-    <h2>How parents communicate care today — and why it breaks</h2>
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <div class="eyebrow-sm">Problem</div>
+      <h2>How parents communicate care today — and why it breaks</h2>
+      <p>Parents of children with special healthcare needs rely on a patchwork of workarounds when handing off care to babysitters, in-laws, relatives, and teachers.</p>
+    </div>
+    <div class="cs-row-media">
+      <figure>
+        <img src="img/kidsync-problem-tiles.png" alt="Problem breakdown tiles showing the core failure modes parents face when handing off care" />
+        <figcaption>The problem, broken down — the specific failure points that existing tools leave unaddressed.</figcaption>
+      </figure>
+    </div>
   </div>
-</section>
 
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-problem-tiles.png" alt="Problem breakdown tiles showing the core failure modes parents face when handing off care" />
-</figure>
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <p>What parents actually do today — handwritten lists, color-coded containers, frantic texts. None of it scales or holds up under the pressure of a real emergency.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-current-solutions.png" alt="Current solutions parents use: handwritten notes, printed sheets, color-coded containers, text messages, and spreadsheets" />
+    </div>
+  </div>
 
-<section class="cs-section tight">
-  <div class="read">
-    <div class="eyebrow-sm">Current solutions</div>
-    <h3>Three workarounds — all inadequate</h3>
-    <div class="sol-cols">
-      <div class="sol-col">
-        <h4>Printed instructions <span class="tag">/ unorganized</span></h4>
-        <p>Overwhelming and inaccessible in an emergency. Parents print pages of care notes that caretakers can't find or read under pressure.</p>
-      </div>
-      <div class="sol-col">
-        <h4>Digital documents <span class="tag">/ passive</span></h4>
-        <p>Shared folders and texts are slightly more accessible but passive and unintuitive — caretakers don't follow through consistently.</p>
-      </div>
-      <div class="sol-col">
-        <h4>Anxiety-driven calls <span class="tag">/ micro-managing</span></h4>
-        <p>Real-time check-ins feel like micro-managing to the sitter, slowly eroding the long-term relationship parents depend on.</p>
-      </div>
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <p>These workarounds share the same four failure modes:</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-painpoints.png" alt="Four pain point categories: Unorganized Information, State of Panic, Medium Gap, Communication Gap" />
     </div>
   </div>
 </section>
 
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-current-solutions.png" alt="Current solutions parents use: handwritten notes, printed sheets, color-coded containers, text messages, and spreadsheets" />
-  <figcaption>The patchwork parents piece together today — none of these are fast enough or reliable enough in an emergency.</figcaption>
-</figure>
-
-<section class="cs-section tight">
-  <div class="read">
-    <div class="eyebrow-sm">Pain points</div>
-    <h3>What breaks in the handoff</h3>
-  </div>
-</section>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-painpoints.png" alt="Four pain point categories: Unorganized Information, State of Panic, Medium Gap, Communication Gap" />
-</figure>
-
-<!-- ═══════════════════════════════════════════
-     OPPORTUNITY
-═══════════════════════════════════════════ -->
-<section class="cs-section tight">
-  <div class="read">
-    <div class="eyebrow-sm">Opportunity</div>
-    <h2>One gap no existing app had filled</h2>
-    <p>Every parent we interviewed described the same failure: when care changes hands, critical information gets lost, confirmation never arrives, and there's no trusted community safety net. We mapped the competitive landscape and found that every existing tool covered at most one of these three dimensions. Kidsync was designed to own all three — profile management, real-time task confirmation, and household-matched community — in a single mobile-first platform.</p>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     HOW IT WORKS  (product before process)
-═══════════════════════════════════════════ -->
+<!-- RESEARCH -->
 <section class="cs-section">
-  <div class="read">
-    <div class="eyebrow-sm">How it works</div>
-    <h2>The product</h2>
-    <p>Three capabilities map directly to the three things that broke in handoffs today: information that wasn't reliable, confirmation that didn't reach the parent, and a support network that didn't exist.</p>
+  <div class="cs-intro">
+    <div class="eyebrow-sm">Research</div>
+    <h2>Understanding the problem before designing anything</h2>
   </div>
+
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <h3>User identification</h3>
+      <p>Designers often make the mistake of cherry-picking personas that fit their agenda. To avoid this, I approached user research with a mix of consumer segmentation, user personas, and user journeys to ensure that our product addresses the correct issues for the right people and market.</p>
+      <p>Three parent segments emerged — DIYers, Tell-Show-Doers, and Reaction Managers — so the product had to work for both the highly prepared parent and the one who only arms caretakers for emergencies.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-segmentation.png" alt="Consumer segmentation matrix: DIYers, Tell Show Doers, Reaction Managers — with demographic, geographic, and behavioral attributes" />
+    </div>
+  </div>
+
+  <figure class="cs-fig-wide">
+    <img src="img/kidsync-journey-map.png" alt="Journey map for Alexis handing off her kid to a babysitter — phases, feelings, actions, pain points, and opportunities" />
+    <figcaption>Alexis' journey map — the emotional low points during Kid Handoff and Return Home identified where the product had the most leverage.</figcaption>
+  </figure>
+
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <h3>Preliminary interview</h3>
+      <p>After dissecting the problem and target users, I defined research objectives, scripted the interview guide, led user interviews via Dscout, and synthesized insights to:</p>
+      <ol>
+        <li>Understand user needs &amp; validate or challenge our assumptions</li>
+        <li>Conduct product walkthroughs to identify frictions and obtain feedback</li>
+        <li>Gauge general interest and willingness to pay</li>
+      </ol>
+      <div class="r-label">Key themes</div>
+      <ul>
+        <li>⭐️ Proactive measures</li>
+        <li>⭐️ Peace of mind</li>
+        <li>⭐️ Effective communication</li>
+      </ul>
+      <div class="r-label">Key moments to solve</div>
+      <ul>
+        <li>🔑 When parents entrust their children to someone else for a period of time</li>
+        <li>🔑 When an emergency happens but parents can't make it back in time</li>
+        <li>🔑 When there are specific events or routines that need to be executed</li>
+      </ul>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-empathy-map.png" alt="Says, Thinks, Does, Feels empathy map from parent interviews" />
+    </div>
+  </div>
+
+  <figure class="cs-fig-wide">
+    <img src="img/kidsync-dscout.png" alt="Dscout interview research matrix with parent quotes, pain points, and insights" />
+    <figcaption>Dscout interview matrix — structured to surface patterns across age, severity, and caregiver type without anchoring to any single story.</figcaption>
+  </figure>
 </section>
 
-<div class="feature-row">
-  <div class="feature-media">
-    <img class="feature-phone" src="img/kidsync-profile-scroll.gif" alt="Kidsync care profile scrolling through Quinn Cooper's healthcare needs, medication, and EpiPen instructions" />
-  </div>
-  <div class="feature-copy">
-    <div class="num">01</div>
-    <h3>All-in-one care profile</h3>
-    <p>Parents build a complete profile — conditions, medications, emergency contacts, and care tips. Authorized caretakers get everything at a glance, with media-rich medication guides they can follow under pressure instead of searching in an emergency.</p>
-  </div>
-</div>
-
-<div class="feature-row reverse">
-  <div class="feature-copy">
-    <div class="num">02</div>
-    <h3>Medication guides &amp; instant document access</h3>
-    <p>Step-by-step medication instructions with photos so a caretaker can act quickly even in a panic. The same profile gives instant access to medical history, insurance, and vaccination cards — the right document, immediately, when it matters most.</p>
-  </div>
-  <div class="feature-media">
-    <img class="feature-phone" src="img/kidsync-stats.png" alt="Kidsync medication administration guide and instant access to medical documents and insurance cards" />
-  </div>
-</div>
-
-<div class="feature-row">
-  <div class="feature-media">
-    <img class="feature-phone" src="img/kidsync-checklist.png" alt="Kidsync calendar checklist for Thursday 25 May showing completed and upcoming care tasks" />
-  </div>
-  <div class="feature-copy">
-    <div class="num">03</div>
-    <h3>Interactive checklist with calendar</h3>
-    <p>Caretakers check off time-based tasks and send real-time confirmation back to parents — closing the anxiety-driven communication loop without the parent having to chase updates.</p>
-  </div>
-</div>
-
-<div class="feature-row reverse">
-  <div class="feature-copy">
-    <div class="num">04</div>
-    <h3>Household matching &amp; community</h3>
-    <p>Kidsync connects households with similar care needs — matched on children's conditions, not just proximity — into a trusted network for support and babysitting, so parents stay connected and informed even when they can't be there.</p>
-  </div>
-  <div class="feature-media">
-    <img class="feature-phone" src="img/kidsync-community-match.png" alt="Kidsync community screen showing compatible family matching and the user's existing network" />
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════
-     VALIDATION  (right after product reveal)
-═══════════════════════════════════════════ -->
+<!-- INSIGHT MAP + OPP MAP -->
 <section class="cs-section tight">
-  <div class="read">
-    <div class="eyebrow-sm">Validation</div>
-    <h2>Users wanted it before it existed</h2>
-    <p>After presenting the concept to parents in usability walkthroughs, the response went beyond positive feedback — people asked when it would be available and said they'd pay for it immediately. These unprompted reactions were the strongest signal of product-market fit we received throughout the program.</p>
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <div class="eyebrow-sm">Synthesis</div>
+      <h2>From insight to lead concept</h2>
+      <p>We mapped the full problem space around childhood allergies — Education, Prevention/Detection, Advocacy, and Treatments — to find where design had the most leverage.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-insight-map.png" alt="Childhood allergy insight map showing themes across Education, Prevention, Advocacy, and Treatments" />
+    </div>
+  </div>
+
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <p>An opportunity map evaluated dozens of concepts across desirability, feasibility, and viability. The lead concept — an app that transfers a child's care information between parties — sat at the intersection of all three.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-opp-map.png" alt="Opportunity map showing lead concept: an app that helps transfer a kid's allergy information from one party to another" />
+    </div>
   </div>
 </section>
 
-<figure class="cs-fig">
-  <img src="img/kidsync-feedback.png" alt='User quotes from usability testing: "this is exactly what I was thinking", "when is this going to become available?", "I would pay any amount for this".' />
-</figure>
-
-<!-- ═══════════════════════════════════════════
-     DESIGN PROCESS
-═══════════════════════════════════════════ -->
-<section class="cs-section process-heading">
-  <div class="read">
-    <div class="eyebrow-sm">Design process</div>
-    <h2>From ambiguous problem space to a focused solution</h2>
-    <p>The path from "childhood allergies" to a care-handoff platform wasn't obvious. It took primary research, rigorous synthesis, and several pivots before we landed on the moment where design had the most leverage.</p>
-  </div>
-</section>
-
-<!-- ── Navigating Ambiguity ── -->
+<!-- MARKET RESEARCH -->
 <section class="cs-section tight">
-  <div class="read">
-    <h3>Navigating ambiguity</h3>
-    <p>We started broad — mapping the full problem space around childhood healthcare needs across Education, Prevention, Advocacy, and Treatments. The insight map revealed that most existing solutions addressed chronic management, but nothing addressed the acute handoff moment: the window when a child moves from one caretaker to another and critical information either transfers reliably or doesn't.</p>
-    <p>We used an opportunity map to evaluate concepts across desirability, feasibility, and viability. The lead concept — transferring care information during a handoff — sat at the intersection of all three and became the clear pivot point.</p>
-  </div>
-</section>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-insight-map.png" alt="Childhood allergy insight map showing themes across Education, Prevention, Advocacy, and Treatments" />
-  <figcaption>Insight map across the childhood allergy problem space — the handoff gap emerged as the underserved intersection.</figcaption>
-</figure>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-opp-map.png" alt="Opportunity map showing lead concept: an app that helps transfer a kid's care information from one party to another" />
-  <figcaption>Opportunity map across Step / Stretch / Leap concepts — the lead concept sat at the intersection of high desirability and feasibility.</figcaption>
-</figure>
-
-<!-- ── Research: User Identification ── -->
-<section class="cs-section tight">
-  <div class="read">
-    <h3>User identification</h3>
-    <p>I approached user research with a mix of consumer segmentation, user personas, and journey maps to ensure the product addressed the correct issues for the right people. Three parent segments emerged — DIYers, Tell-Show-Doers, and Reaction Managers — so the product had to work for both the highly prepared parent and the one who only arms caretakers for emergencies.</p>
-  </div>
-</section>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-segmentation.png" alt="Consumer segmentation matrix: DIYers, Tell Show Doers, Reaction Managers — with demographic, geographic, and behavioral attributes" />
-  <figcaption>Segmentation matrix — avoided designing only for the anxious, hypervigilant parent by accounting for three distinct preparation styles.</figcaption>
-</figure>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-journey-map.png" alt="Journey map for Alexis handing off her kid to a babysitter — phases, feelings, actions, pain points, and opportunities" />
-  <figcaption>Alexis' journey map — the emotional low points during Kid Handoff and Return Home identified where the product had the most leverage.</figcaption>
-</figure>
-
-<!-- ── Research: Preliminary Interviews ── -->
-<section class="cs-section tight">
-  <div class="read">
-    <h3>Preliminary interviews</h3>
-    <p>I defined the research objectives, scripted the interview guide, ran sessions via Dscout, and synthesized findings to validate assumptions, surface friction through product walkthroughs, and gauge interest and willingness to pay.</p>
-    <ul class="winlist">
-      <li>Key themes: proactive measures, peace of mind, effective communication</li>
-      <li>Key moments: care handoffs, emergencies when parents can't return in time, time-sensitive routines</li>
-    </ul>
-  </div>
-</section>
-
-<figure class="cs-fig">
-  <img src="img/kidsync-empathy-map.png" alt="Says, Thinks, Does, Feels empathy map from parent interviews" />
-  <figcaption>Empathy map synthesized from interview transcripts to build a shared team understanding of the emotional context.</figcaption>
-</figure>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-dscout.png" alt="Dscout interview research matrix with parent quotes, pain points, and insights" />
-  <figcaption>Dscout matrix — structured to surface patterns across age, severity, and caregiver type without anchoring to any single story.</figcaption>
-</figure>
-
-<!-- ── Market Research ── -->
-<section class="cs-section tight">
-  <div class="read">
-    <h3>Market research</h3>
+  <div class="cs-intro">
+    <div class="eyebrow-sm">Market research</div>
+    <h2>No one owns all three functions</h2>
     <p>We mapped the competitive landscape across three dimensions — real-time interactivity, shared access, and profile management — and found most apps covered only one or two. Kidsync was positioned as the first to integrate all three.</p>
   </div>
-</section>
-
-<div class="fig-pair">
-  <figure>
-    <img src="img/kidsync-market-position.png" alt="Venn diagram positioning Kidsync vs competitors across real-time interactivity, shared access, and profile management" />
-    <figcaption>Competitive positioning — Kidsync sits at the intersection no existing app occupied.</figcaption>
-  </figure>
-  <figure>
-    <img src="img/kidsync-competition.png" alt="Competition feature analysis table comparing Kidsync, WeParent, FamCal, 2Houses, Parentship, and Belay" />
-    <figcaption>Feature analysis — Kidsync uniquely combines access management, community matching, and document management.</figcaption>
-  </figure>
-</div>
-
-<!-- ── Development ── -->
-<section class="cs-section tight">
-  <div class="read">
-    <h3>Development</h3>
-    <p>I ran storyboarding sessions to explore use cases across different parent scenarios, then turned them into a prioritized user story backlog, a master user flow, and lo-fi wireframes that we tested and refined into high-fidelity screens.</p>
+  <div class="fig-pair">
+    <figure>
+      <img src="img/kidsync-market-position.png" alt="Venn diagram positioning Kidsync vs competitors across real-time interactivity, shared access, and profile management" />
+      <figcaption>Competitive positioning — Kidsync sits at the intersection that no existing app occupied.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/kidsync-competition.png" alt="Competition feature analysis table comparing Kidsync, WeParent, FamCal, 2Houses, Parentship, and Belay" />
+      <figcaption>Feature analysis across six competitors — Kidsync uniquely combines access management, community matching, and document management.</figcaption>
+    </figure>
   </div>
 </section>
 
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-storyboard.png" alt="Whiteboard storyboard for Dad's Week scenario showing the 12-step user journey" />
-  <figcaption>Storyboard for the "Dad's Week" co-parenting scenario — mapping the end-to-end journey before touching any screens.</figcaption>
-</figure>
-
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-user-flow.png" alt="User flow diagram for sharing access and managing caretaker profiles" />
-  <figcaption>Master user flow — mapping the complete sharing access journey before any visual design began.</figcaption>
-</figure>
-
-<div class="fig-pair">
-  <figure>
-    <img src="img/kidsync-wireframe.png" alt="Lo-fi to hi-fi prototype evolution across three screens" />
-    <figcaption>Lo-fi to hi-fi evolution — each iteration validated with walkthroughs and usability testing.</figcaption>
+<!-- DEVELOPMENT -->
+<section class="cs-section">
+  <div class="cs-intro">
+    <div class="eyebrow-sm">Development</div>
+    <h2>From storyboards to a shippable flow</h2>
+    <p>I ran storyboarding sessions to explore every use case across different parent scenarios, then turned them into a prioritized user story backlog, a master user flow, and finally lo-fi wireframes that we tested and refined into high-fidelity screens.</p>
+  </div>
+  <figure class="cs-fig-wide">
+    <img src="img/kidsync-storyboard.png" alt="Whiteboard storyboard for Dad's Week scenario showing the 12-step user journey" />
+    <figcaption>Storyboard for the "Dad's Week" co-parenting scenario — mapping the end-to-end journey before touching any screens.</figcaption>
   </figure>
-  <figure>
-    <img src="img/kidsync-backlog.png" alt="User stories backlog with priority order and client importance ratings" />
-    <figcaption>User story backlog — prioritized by caregiver need and client importance, which drove the MVP scope.</figcaption>
+  <figure class="cs-fig-wide">
+    <img src="img/kidsync-user-flow.png" alt="User flow diagram for sharing access and managing caretaker profiles" />
+    <figcaption>Master user flow — mapping the complete sharing access journey before any visual design began.</figcaption>
   </figure>
-</div>
+  <div class="fig-pair">
+    <figure>
+      <img src="img/kidsync-wireframe.png" alt="Lo-fi to hi-fi prototype evolution across three screens" />
+      <figcaption>Lo-fi to hi-fi evolution — each iteration validated with walkthroughs and usability testing.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/kidsync-backlog.png" alt="User stories backlog with priority order and client importance ratings" />
+      <figcaption>User story backlog — prioritized by caregiver need and client importance, which drove the MVP scope decision.</figcaption>
+    </figure>
+  </div>
+</section>
 
-<!-- ── Design Challenges ── -->
-<section class="cs-section tight">
+<!-- HOW IT WORKS -->
+<section class="cs-section">
+  <div class="cs-intro">
+    <div class="eyebrow-sm">How it works</div>
+    <h2>The product</h2>
+    <p>Three capabilities map directly to the three things that broke in handoff today: information that wasn't reliable, confirmation that didn't reach the parent, and a support network that didn't exist.</p>
+  </div>
+
+  <!-- 01: phone left (flip), text right -->
+  <div class="cs-row flip">
+    <div class="cs-row-copy">
+      <div class="si">01</div>
+      <h3>All-in-one care profile</h3>
+      <p>Parents build a complete profile — conditions, medication instructions, documents, emergency contacts, and care tips. Authorized caretakers get everything at a glance, with media-rich medication guides they can follow under pressure instead of searching in an emergency.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-profile-scroll.gif" alt="Kidsync care profile scrolling through Quinn Cooper's healthcare needs, medication, and EpiPen instructions" />
+    </div>
+  </div>
+
+  <!-- text left, phone right -->
+  <div class="cs-row product">
+    <div class="cs-row-copy">
+      <h3>Customizable medication guides &amp; instant document access</h3>
+      <p>Through media support, parents upload clear, easy-to-follow instructions for administering medication — so a caretaker can act quickly even in a state of panic. The same profile gives instant access to medical history, insurance, and vaccination cards, removing the stress of finding the right documents during a time-sensitive emergency.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-stats.png" alt="Kidsync medication administration guide and instant access to medical documents and insurance cards" />
+    </div>
+  </div>
+
+  <!-- 02: phone left (flip), text right -->
+  <div class="cs-row flip">
+    <div class="cs-row-copy">
+      <div class="si">02</div>
+      <h3>Interactive checklist with calendar</h3>
+      <p>Caretakers check off time-based tasks and send real-time confirmation back to parents — closing the anxiety-driven communication gap without the parent having to chase updates.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-checklist.png" alt="Kidsync calendar checklist for Thursday 25 May showing completed and upcoming care tasks" />
+    </div>
+  </div>
+
+  <!-- 03: text left, phone right -->
+  <div class="cs-row product">
+    <div class="cs-row-copy">
+      <div class="si">03</div>
+      <h3>Household matching &amp; community</h3>
+      <p>Kidsync connects households with similar care needs — matched on children's conditions, not just proximity — into a trusted network for support and babysitting, so parents stay connected and informed.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-community-match.png" alt="Kidsync community screen showing compatible family matching and the user's existing network" />
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN CHALLENGES -->
+<section class="cs-section">
+  <div class="cs-intro">
+    <div class="eyebrow-sm">Design challenges</div>
+    <h2>Three decisions that shaped the product</h2>
+  </div>
   <div class="read">
-    <h3>Design challenges</h3>
-
     <div class="challenge">
       <div class="num">Challenge 01</div>
       <h3>Refining the information hierarchy</h3>
@@ -431,7 +348,7 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
     <div class="challenge">
       <div class="num">Challenge 02</div>
       <h3>Prioritizing mobile accessibility</h3>
-      <p>We first imagined Kidsync as a web app because of its complex information architecture. User feedback said a web app wasn't immediate enough — a panicked babysitter reaches for their phone, not a laptop. We pivoted to mobile-first.</p>
+      <p>We first imagined Kidsync as a web app because of its complex information architecture. User feedback said a web app wasn't immediate enough for real use cases — a panicked babysitter reaches for their phone, not a laptop. We pivoted to mobile-first.</p>
     </div>
 
     <div class="challenge">
@@ -440,21 +357,33 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
       <p>Some parents worried sitters might retain access after their duties ended. We added granular controls over the scope and duration of profile sharing — parents choose exactly which information categories a caretaker can see, and when their access expires automatically.</p>
     </div>
   </div>
+
+  <figure class="cs-fig-wide">
+    <img src="img/kidsync-challenge-hierarchy.png" alt="Before and after of the profile screen information hierarchy — lo-fi to mid-fi to hi-fi showing the reordering" />
+    <figcaption>The profile evolution — demographics moved down, care needs and medication moved to the top where caretakers look first.</figcaption>
+  </figure>
+
+  <figure class="cs-fig">
+    <img src="img/kidsync-manage-access.png" alt="Manage Access screen showing caretaker list, toggle controls per information category, and expiry date setting" />
+    <figcaption>Manage Access — parents control exactly which information categories each caretaker can see, with automatic expiry.</figcaption>
+  </figure>
 </section>
 
-<figure class="cs-fig-wide">
-  <img src="img/kidsync-challenge-hierarchy.png" alt="Before and after of the profile screen information hierarchy — lo-fi to mid-fi to hi-fi showing the reordering" />
-  <figcaption>The profile evolution — demographics moved down, care needs and medication moved to the top where caretakers look first.</figcaption>
-</figure>
+<!-- VALIDATION -->
+<section class="cs-section tight">
+  <div class="cs-row">
+    <div class="cs-row-copy">
+      <div class="eyebrow-sm">Validation</div>
+      <h2>Users wanted it before it existed</h2>
+      <p>After presenting the concept to parents in usability walkthroughs, the response went beyond positive feedback — people asked when it would be available and said they'd pay for it immediately. Unprompted reactions like these were the strongest signal of product-market fit we received.</p>
+    </div>
+    <div class="cs-row-media">
+      <img src="img/kidsync-feedback.png" alt='User quotes from usability testing: "this is exactly what I was thinking", "when is this going to become available?", "I would pay any amount for this".' />
+    </div>
+  </div>
+</section>
 
-<figure class="cs-fig">
-  <img src="img/kidsync-manage-access.png" alt="Manage Access screen showing caretaker list, toggle controls per information category, and expiry date setting" />
-  <figcaption>Granular access controls — parents set which information categories a caretaker can see and when their access expires.</figcaption>
-</figure>
-
-<!-- ═══════════════════════════════════════════
-     TAKEAWAY
-═══════════════════════════════════════════ -->
+<!-- TAKEAWAY -->
 <section class="cs-section tight">
   <div class="read">
     <div class="takeaway">
@@ -464,14 +393,12 @@ figure.cs-fig-wide + figure.cs-fig{margin-top:24px}
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     NEXT STEPS
-═══════════════════════════════════════════ -->
+<!-- NEXT STEPS -->
 <section class="cs-section tight">
   <div class="read">
     <div class="eyebrow-sm">Next steps</div>
     <h2>Where Kidsync goes from here</h2>
-    <p>The near-term focus is launching and scaling a B2C base around families of children with special healthcare needs. From there, the platform's architecture opens naturally to pet care and elderly care, and ultimately a B2B move — partnering with care facilities, schools, and hospitals to become a comprehensive care-management platform.</p>
+    <p>The near-term focus is launching, scaling, and growing a B2C base around families of children with special healthcare needs. From there, the platform's architecture opens naturally to pet care and elderly care, and ultimately a B2B move — partnering with care facilities, schools, and hospitals to become a comprehensive care-management platform.</p>
   </div>
 </section>
 
