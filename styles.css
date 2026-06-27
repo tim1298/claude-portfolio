@@ -256,6 +256,7 @@ figure.cs-fig-wide{
 }
 .cs-row.product{grid-template-columns:3fr 2fr;align-items:center}
 .cs-row.flip .cs-row-media{order:-1}
+.cs-row.flip{align-items:center}
 .cs-row-media img{width:100%;border-radius:var(--r-sm);display:block}
 /* h2 inside a copy column (Problem, Synthesis): tighten bottom gap before body text */
 .cs-row-copy h2{margin-bottom:14px}
@@ -322,6 +323,21 @@ figure.cs-fig-wide + figure.cs-fig-wide{margin-top:24px}
 .cs-section .cs-intro + figure.cs-fig-wide,
 .cs-section .cs-intro + .fig-pair{margin-top:32px}
 .cs-section .cs-intro + .read{margin-top:28px}
+
+/* ============================================================
+   CS-BODY — wide editorial wrapper for title + copy sections
+   Same 1200px boundary as .cs-row; body copy is left-anchored
+   to the content grid instead of sitting in a narrow centered column.
+   ============================================================ */
+.cs-body{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 var(--pad);
+}
+.cs-section .cs-body + .cs-row,
+.cs-section .cs-body + figure.cs-fig,
+.cs-section .cs-body + figure.cs-fig-wide,
+.cs-section .cs-body + .fig-pair{margin-top:32px}
 
 /* Captions inside cs-row-media (when img is wrapped in <figure>) */
 .cs-row-media figure{margin:0}

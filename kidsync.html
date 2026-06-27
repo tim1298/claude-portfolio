@@ -15,18 +15,9 @@
 @media(max-width:1024px){.summary-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.summary-grid{grid-template-columns:1fr 1fr}}
 
-/* ── Context: NW logo left, paragraph right (inside .read) ── */
-.context-row{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-.context-row .ctx-badge img{width:120px;height:auto;object-fit:contain}
-@media(max-width:600px){
-  .context-row{grid-template-columns:1fr;gap:16px}
-  .context-row .ctx-badge img{width:80px}
-}
-
-/* ── Elliot: portrait photo left, callout right (inside .read) ── */
-.elliot-row{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:stretch;margin:22px 0}
-.elliot-row img{width:100%;height:100%;border-radius:var(--r-sm);object-fit:cover}
-@media(max-width:600px){.elliot-row{grid-template-columns:1fr}}
+/* ── NW logo in context row right column ── */
+.ctx-badge{display:flex;align-items:center;justify-content:center}
+.ctx-badge img{max-width:160px;height:auto;object-fit:contain}
 </style>
 </head>
 <body>
@@ -88,31 +79,33 @@
 
 <!-- CONTEXT -->
 <section class="cs-section">
-  <div class="read">
-    <div class="eyebrow-sm">Context</div>
-    <h2>A nine-month "Shark Tank" for product</h2>
-    <div class="context-row">
-      <div class="ctx-badge">
-        <img src="img/kidsync-northwestern.png" alt="Northwestern University" />
-      </div>
+  <div class="cs-row product">
+    <div class="cs-row-copy">
+      <div class="eyebrow-sm">Context</div>
+      <h2>A nine-month "Shark Tank" for product</h2>
       <p>This was the capstone of Northwestern's Master of Product Design &amp; Development Management (mpd²) program. Over nine months, professionals from different fields team up to design and pitch a disruptive product to a panel of judges and VC investors. It demands critical thinking, strategic planning, cross-functional collaboration, and persuasive communication — end to end.</p>
+    </div>
+    <div class="cs-row-media ctx-badge">
+      <img src="img/kidsync-northwestern.png" alt="Northwestern University" />
     </div>
   </div>
 </section>
 
 <!-- ELLIOT / EMOTIONAL HOOK -->
 <section class="cs-section tight">
-  <div class="read">
-    <div class="eyebrow-sm">Why this problem matters</div>
-    <h2>Elliot couldn't breathe</h2>
-    <div class="elliot-row">
-      <img src="img/kidsync-elliot.jpeg" alt="Elliot, the child whose severe allergic reaction inspired the project" />
+  <div class="cs-row flip">
+    <div class="cs-row-copy">
+      <div class="eyebrow-sm">Why this problem matters</div>
+      <h2>Elliot couldn't breathe</h2>
       <div class="callout">
         <div class="q">"I can't breathe…"</div>
         <p>Elliot reached for his babysitter as he gasped for air. He was four, had a severe peanut allergy, and was unintentionally given a Butterfinger. In the panic, his babysitter failed to administer an EpiPen on the way to the ER. He made it just in time. Luckily, he's now a bright eight-year-old. However, that day changed his parents forever.</p>
       </div>
+      <p>Every time they have to entrust their child to someone else, the anxiety comes back. And they're not alone.</p>
     </div>
-    <p>Every time they have to entrust their child to someone else, the anxiety comes back. And they're not alone.</p>
+    <div class="cs-row-media">
+      <img src="img/kidsync-elliot.jpeg" alt="Elliot, the child whose severe allergic reaction inspired the project" />
+    </div>
   </div>
 </section>
 
@@ -338,35 +331,43 @@
     <div class="eyebrow-sm">Design challenges</div>
     <h2>Three decisions that shaped the product</h2>
   </div>
-  <div class="read">
+
+  <!-- Row 1: Challenge 01 + 02 side by side -->
+  <div class="fig-pair">
     <div class="challenge">
       <div class="num">Challenge 01</div>
       <h3>Refining the information hierarchy</h3>
       <p>The profile originally led with demographics and education, then care instructions, documents, and contacts. Research showed general care information matters most to babysitters in the moment, so we reordered the hierarchy and added media support for medication photos and video guides — putting life-saving instructions first.</p>
     </div>
-
     <div class="challenge">
       <div class="num">Challenge 02</div>
       <h3>Prioritizing mobile accessibility</h3>
       <p>We first imagined Kidsync as a web app because of its complex information architecture. User feedback said a web app wasn't immediate enough for real use cases — a panicked babysitter reaches for their phone, not a laptop. We pivoted to mobile-first.</p>
     </div>
-
-    <div class="challenge">
-      <div class="num">Challenge 03</div>
-      <h3>Enhancing data security</h3>
-      <p>Some parents worried sitters might retain access after their duties ended. We added granular controls over the scope and duration of profile sharing — parents choose exactly which information categories a caretaker can see, and when their access expires automatically.</p>
-    </div>
   </div>
 
+  <!-- Row 2: Hierarchy evolution — full-width needed for the before/after detail -->
   <figure class="cs-fig-wide">
     <img src="img/kidsync-challenge-hierarchy.png" alt="Before and after of the profile screen information hierarchy — lo-fi to mid-fi to hi-fi showing the reordering" />
     <figcaption>The profile evolution — demographics moved down, care needs and medication moved to the top where caretakers look first.</figcaption>
   </figure>
 
-  <figure class="cs-fig">
-    <img src="img/kidsync-manage-access.png" alt="Manage Access screen showing caretaker list, toggle controls per information category, and expiry date setting" />
-    <figcaption>Manage Access — parents control exactly which information categories each caretaker can see, with automatic expiry.</figcaption>
-  </figure>
+  <!-- Row 3: Challenge 03 left, Manage Access right, vertically centered -->
+  <div class="cs-row product">
+    <div class="cs-row-copy">
+      <div class="challenge">
+        <div class="num">Challenge 03</div>
+        <h3>Enhancing data security</h3>
+        <p>Some parents worried sitters might retain access after their duties ended. We added granular controls over the scope and duration of profile sharing — parents choose exactly which information categories a caretaker can see, and when their access expires automatically.</p>
+      </div>
+    </div>
+    <div class="cs-row-media">
+      <figure>
+        <img src="img/kidsync-manage-access.png" alt="Manage Access screen showing caretaker list, toggle controls per information category, and expiry date setting" />
+        <figcaption>Manage Access — parents control exactly which information categories each caretaker can see, with automatic expiry.</figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
 <!-- VALIDATION -->
@@ -385,7 +386,7 @@
 
 <!-- TAKEAWAY -->
 <section class="cs-section tight">
-  <div class="read">
+  <div class="cs-body">
     <div class="takeaway">
       <div class="eyebrow-sm">What it demonstrates</div>
       <p>Kidsync took a complex, emotionally charged problem from primary research through segmentation, competitive analysis, and end-to-end product design — and arrived at a focused concept users wanted before it existed. The hardest call wasn't visual; it was narrowing a broad "childhood allergy" space down to the single handoff moment where design had the most leverage.</p>
@@ -395,7 +396,7 @@
 
 <!-- NEXT STEPS -->
 <section class="cs-section tight">
-  <div class="read">
+  <div class="cs-body">
     <div class="eyebrow-sm">Next steps</div>
     <h2>Where Kidsync goes from here</h2>
     <p>The near-term focus is launching, scaling, and growing a B2C base around families of children with special healthcare needs. From there, the platform's architecture opens naturally to pet care and elderly care, and ultimately a B2B move — partnering with care facilities, schools, and hospitals to become a comprehensive care-management platform.</p>
