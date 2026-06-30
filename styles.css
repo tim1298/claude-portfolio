@@ -257,6 +257,9 @@ figure.cs-fig-wide{
 .cs-row.product{grid-template-columns:3fr 2fr;align-items:center}
 .cs-row.flip .cs-row-media{order:-1}
 .cs-row.flip{align-items:center}
+.cs-row.cover{align-items:stretch}
+.cs-row.cover .cs-row-media{display:flex;flex-direction:column}
+.cs-row.cover .cs-row-media img{flex:1;object-fit:cover;min-height:200px}
 .cs-row.media-70{grid-template-columns:30fr 70fr;align-items:center}
 .cs-row.media-80{grid-template-columns:20fr 80fr;align-items:center}
 @media(max-width:860px){.cs-row.media-70 .cs-row-media{order:1}.cs-row.media-80 .cs-row-media{order:1}}
