@@ -344,7 +344,7 @@ figure.cs-fig-wide + figure.cs-fig-wide{margin-top:24px}
 
 /* Captions inside cs-row-media (when img is wrapped in <figure>) */
 .cs-row-media figure{margin:0}
-.cs-row-media figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.45}
+.cs-row-media figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.45;text-align:left}
 
 /* takeaway */
 .takeaway{background:var(--accent-soft);border-radius:var(--r-md);padding:38px 40px;margin:14px 0}
