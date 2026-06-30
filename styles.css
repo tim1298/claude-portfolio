@@ -107,6 +107,14 @@ footer{border-top:1px solid var(--hair);padding:34px 0;margin-top:0}
 .cs-section p .lead{font-weight:500}
 .eyebrow-sm{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 
+/* goal cards */
+.goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px}
+.goal-card{padding-top:22px}
+.goal-num{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.goal-label{font-family:var(--display);font-size:clamp(18px,2vw,22px);font-weight:500;font-style:italic;letter-spacing:-.01em;color:var(--ink);margin-bottom:12px}
+.goal-card p{font-size:15.5px;color:#44444b;line-height:1.6;margin:0}
+@media(max-width:860px){.goal-grid{grid-template-columns:1fr;gap:24px}}
+
 /* pain / win lists */
 .painlist{list-style:none;display:grid;gap:12px;margin:18px 0 8px}
 .painlist li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#33333a;line-height:1.5}
