@@ -402,6 +402,7 @@ figure.cs-fig-wide + figure.cs-fig-wide{margin-top:24px}
 .takeaway{background:var(--accent-soft);border-radius:var(--r-md);padding:38px 40px;margin:14px 0}
 .takeaway .eyebrow-sm{color:var(--muted)}
 .takeaway p{font-size:18px;color:#2a2a4a;margin-bottom:0;line-height:1.55}
+.takeaway p+p{margin-top:16px}
 
 /* next project */
 .cs-next{border-top:1px solid var(--hair);padding:48px 0}
