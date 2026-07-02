@@ -138,6 +138,36 @@ footer{border-top:1px solid var(--hair);padding:34px 0;margin-top:0}
 .challenge h3{margin:0 0 10px;font-size:20px}
 .challenge p{margin-bottom:0;font-size:16px;color:#44444b}
 
+/* challenge image pair */
+.copilot-challenge-image-pair{display:flex;gap:clamp(20px,3vw,32px);margin:24px 0 72px;align-items:flex-start}
+.copilot-challenge-image-pair__item{min-width:0}
+.copilot-challenge-image-pair__item:first-child{flex:1463}
+.copilot-challenge-image-pair__item:last-child{flex:3170}
+.copilot-challenge-image-pair__media{width:100%;height:auto;display:block;border-radius:var(--r-sm)}
+.copilot-challenge-image-pair .copilot-challenge-image-pair__caption{font-size:13.5px;color:var(--muted);margin-top:12px;margin-bottom:0;line-height:1.45;text-align:center;padding:0 4px}
+@media(max-width:760px){
+  .copilot-challenge-image-pair{flex-direction:column;margin-bottom:48px}
+  .copilot-challenge-image-pair__item:first-child,
+  .copilot-challenge-image-pair__item:last-child{flex:none;width:100%}
+}
+
+/* challenge evolution row */
+.copilot-challenge-evolution{display:flex;gap:clamp(16px,2vw,24px);margin:24px 0 72px;align-items:center}
+.copilot-challenge-evolution__item{min-width:0;align-self:flex-start}
+.copilot-challenge-evolution__arrow{flex-shrink:0;font-size:20px;color:var(--muted);line-height:1;user-select:none}
+.copilot-challenge-evolution__media{width:100%;height:auto;display:block;border-radius:var(--r-sm)}
+.copilot-challenge-evolution .copilot-challenge-evolution__caption{font-size:13.5px;color:var(--muted);margin-top:12px;margin-bottom:0;line-height:1.45;text-align:center;padding:0 4px}
+@media(max-width:760px){
+  .copilot-challenge-evolution{flex-direction:column;margin-bottom:48px}
+  .copilot-challenge-evolution__item{flex:none;width:100%;align-self:auto}
+}
+.copilot-challenge-evolution--stacked{flex-direction:column;align-items:stretch}
+.copilot-challenge-evolution--stacked .copilot-challenge-evolution__arrow{align-self:center}
+.copilot-challenge-evolution--stacked .copilot-challenge-evolution__item--centered-half{width:50%;align-self:center}
+@media(max-width:760px){
+  .copilot-challenge-evolution--stacked .copilot-challenge-evolution__item--centered-half{width:100%;align-self:stretch}
+}
+
 /* steps */
 .step{display:grid;grid-template-columns:42px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--hair)}
 .step:last-child{border-bottom:none}
@@ -361,6 +391,10 @@ figure.cs-fig-wide + figure.cs-fig-wide{margin-top:24px}
 /* Captions inside cs-row-media (when img is wrapped in <figure>) */
 .cs-row-media figure{margin:0}
 .cs-row-media figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.45;text-align:left}
+/* How It Works: anchor media column to top so captions align consistently under each image */
+.how-it-works .cs-row-media{align-self:start}
+/* How It Works: match caption style to Design Process cs-fig-wide figcaption exactly */
+.how-it-works .cs-row-media figcaption{margin-top:12px;text-align:center;padding:0 4px}
 .ctx-badge{display:flex;align-items:center;justify-content:center}
 .ctx-badge img{max-width:100%;height:auto;max-height:160px;object-fit:contain}
 
