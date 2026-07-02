@@ -226,6 +226,9 @@ figure.cs-fig-wide{
   padding:0 var(--pad);
 }
 
+figure.prediction-challenge-one-media{width:45%;max-width:45%}
+@media(max-width:860px){figure.prediction-challenge-one-media{width:100%;max-width:100%}}
+
 /* wide wrapper passthrough (HTML compatibility) */
 .cs-fig-wide-wrap{
   width:100%;
