@@ -228,6 +228,8 @@ figure.cs-fig-wide{
 
 figure.prediction-challenge-one-media{width:45%;max-width:45%}
 @media(max-width:860px){figure.prediction-challenge-one-media{width:100%;max-width:100%}}
+figure.prediction-challenge-three-media{width:80%;max-width:calc(var(--maxw) * 0.8)}
+@media(max-width:860px){figure.prediction-challenge-three-media{width:100%;max-width:100%}}
 
 /* wide wrapper passthrough (HTML compatibility) */
 .cs-fig-wide-wrap{
