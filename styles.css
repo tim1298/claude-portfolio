@@ -231,6 +231,9 @@ figure.prediction-challenge-one-media{width:45%;max-width:45%}
 figure.prediction-challenge-three-media{width:80%;max-width:calc(var(--maxw) * 0.8)}
 @media(max-width:860px){figure.prediction-challenge-three-media{width:100%;max-width:100%}}
 
+.prediction-validation-results-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);align-items:start}
+@media(max-width:860px){.prediction-validation-results-grid{grid-template-columns:1fr;gap:32px}}
+
 /* wide wrapper passthrough (HTML compatibility) */
 .cs-fig-wide-wrap{
   width:100%;
