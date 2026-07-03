@@ -54,11 +54,11 @@ section.block{padding:88px 0}
 .card-link .arrow{transition:transform .15s}
 .card:hover .card-link .arrow{transform:translateX(4px)}
 /* About — two-column, light background */
-.about{border-top:1px solid var(--hair);padding:72px 0;display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:start}
-.about-meta .eyebrow{margin-bottom:24px}
-.credentials{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--hair);border-radius:var(--r-pill);padding:7px 14px;font-size:13px;color:var(--ink);font-weight:500}
-.about-bio h2{font-family:var(--display);font-weight:500;font-size:clamp(24px,3vw,34px);letter-spacing:-.025em;line-height:1.2;max-width:22ch;margin-bottom:22px}
+.about{border-top:1px solid var(--hair);padding:72px 0;display:grid;grid-template-columns:1fr 2fr;column-gap:64px;align-items:start}
+.about-eyebrow{margin-bottom:24px}
+.about-figure{margin:0}
+.about-figure img{width:93%;height:auto;aspect-ratio:1/1;border-radius:var(--r-md);border:1px solid var(--hair);box-shadow:0 14px 32px -22px rgba(22,22,26,.28);display:block}
+.about-head{font-family:var(--display);font-weight:500;font-size:clamp(24px,3vw,34px);letter-spacing:-.025em;line-height:1.2;max-width:22ch;margin-bottom:22px}
 .about-bio p{color:var(--muted);font-size:16.5px;line-height:1.6;max-width:62ch;margin-bottom:16px}
 .cta{padding:96px 0 88px;text-align:center}
 .cta h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.4vw,52px);letter-spacing:-.02em;line-height:1.08;margin-bottom:20px;max-width:18ch;margin-inline:auto}
@@ -75,6 +75,7 @@ section.block{padding:88px 0}
   .card{grid-template-columns:1fr}
   .card-visual{min-height:200px;order:-1}
   .about{grid-template-columns:1fr;gap:32px;padding:64px 0}
+  .about-figure img{max-width:300px;height:auto;aspect-ratio:1/1}
   .hero{padding:64px 0 48px}
   section.block{padding:64px 0}
   .proof-inner{flex-direction:column;align-items:flex-start;gap:24px}
@@ -101,8 +102,8 @@ section.block{padding:88px 0}
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow">Senior Product Designer · AI &amp; Data · B2B SaaS</div>
-    <h1>I turn ambiguous AI and data problems into products people <em>actually adopt</em>.</h1>
-    <p class="lede">10+ years across B2B SaaS, AI, and enterprise products. From 0-to-1 launches to platforms used by millions, I work end to end, research, strategy, and craft, and I care whether the work shows up in the numbers.</p>
+    <h1>I turn messy AI and data problems into products people <em>actually adopt</em>.</h1>
+    <p class="lede">From 0-to-1 launches to platforms used by millions, I work end to end across research, strategy, and craft. I care whether the work shows up in the numbers.</p>
     <div class="hero-actions">
       <a href="#work" class="btn btn-primary">See selected work →</a>
       <a href="Tim_Hsieh_ProductDesigner_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download resume</a>
@@ -117,10 +118,10 @@ section.block{padding:88px 0}
       Past work at <strong>Tailwind</strong>, <strong>Wolfram</strong> &amp; <strong>Grainger</strong> · Dual Master's, <strong>RISD</strong> &amp; <strong>Northwestern</strong>
     </div>
     <div class="stats">
-      <div class="stat"><span class="num">+73%</span><span class="lab">engagement, 0-to-1 launch</span></div>
-      <div class="stat"><span class="num">+75%</span><span class="lab">targeting precision, AI tool</span></div>
+      <div class="stat"><span class="num">10+</span><span class="lab">years in product design</span></div>
       <div class="stat"><span class="num">2M+</span><span class="lab">users designed for</span></div>
-      <div class="stat"><span class="num">1</span><span class="lab">design patent</span></div>
+      <div class="stat"><span class="num">0→1</span><span class="lab">products launched</span></div>
+      <div class="stat"><span class="num">2</span><span class="lab">design Master's degrees</span></div>
     </div>
   </div>
 </div>
@@ -129,7 +130,7 @@ section.block{padding:88px 0}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="sec-title">Selected work</h2>
-      <span class="sec-note">Outcomes are from the shipped products and pilots themselves.</span>
+      <span class="sec-note">Every number here comes from a shipped product or live pilot.</span>
     </div>
     <div class="work">
 
@@ -137,7 +138,7 @@ section.block{padding:88px 0}
         <div class="card-body">
           <div class="card-kicker">Tailwind · B2B SaaS · 0-to-1</div>
           <h3>Tailwind Copilot</h3>
-          <p class="desc">An all-in-one AI marketing assistant for small business owners, built from scratch to launch in 8 months. Sole designer and product owner alongside developers, PMs, and the executive board.</p>
+          <p class="desc">An AI marketing assistant for small business owners, built from scratch to launch in 8 months. Sole designer and product owner, working with developers, PMs, and the executive board.</p>
           <div class="card-metrics">
             <div class="cm"><span class="n">+73%</span><span class="l">engagement</span></div>
             <div class="cm"><span class="n">+30%</span><span class="l">conversion</span></div>
@@ -152,7 +153,7 @@ section.block{padding:88px 0}
         <div class="card-body">
           <div class="card-kicker">Confidential client · AI / MarTech</div>
           <h3>AI Customer Profile Prediction</h3>
-          <p class="desc">Turned a stalled "look what we can do" AI prototype into a marketing intelligence tool marketers trust, with human-in-the-loop validation of LLM-generated user attributes. Product strategist and design lead.</p>
+          <p class="desc">A stalled "look what we can do" AI prototype, rebuilt as a marketing-intelligence tool that marketers trust, with human-in-the-loop validation of LLM-generated user attributes. Product strategist and design lead.</p>
           <div class="card-metrics">
             <div class="cm"><span class="n">5×</span><span class="l">faster segmentation</span></div>
             <div class="cm"><span class="n">+75%</span><span class="l">targeting precision</span></div>
@@ -169,9 +170,9 @@ section.block{padding:88px 0}
           <h3>Kidsync</h3>
           <p class="desc">A care-management platform for families of children with special healthcare needs, designed end to end in a 9-month Northwestern capstone. Led research, problem framing, and product design.</p>
           <div class="card-metrics">
-            <div class="cm"><span class="n">0→1</span><span class="l">concept to pitch</span></div>
-            <div class="cm"><span class="n">Mobile</span><span class="l">first, research-led</span></div>
-            <div class="cm"><span class="n">JTBD</span><span class="l">research framework</span></div>
+            <div class="cm"><span class="n">0→1</span><span class="l">validated by VC investors</span></div>
+            <div class="cm"><span class="n">9 mo</span><span class="l">end-to-end design</span></div>
+            <div class="cm"><span class="n">$1.88B</span><span class="l">market opportunity</span></div>
           </div>
           <div class="card-link-row"><span class="card-link">Read case study <span class="arrow">→</span></span></div>
         </div>
@@ -185,21 +186,14 @@ section.block{padding:88px 0}
 <section class="block" id="about">
   <div class="wrap">
     <div class="about">
-      <div class="about-meta">
-        <div class="eyebrow">About</div>
-        <div class="credentials">
-          <span class="chip">B2B SaaS</span>
-          <span class="chip">AI / ML UX</span>
-          <span class="chip">Design systems</span>
-          <span class="chip">0-to-1 product</span>
-          <span class="chip">Research &amp; strategy</span>
-          <span class="chip">RISD · Northwestern</span>
-        </div>
-      </div>
+      <div class="eyebrow about-eyebrow">About</div>
+      <h2 class="about-head">I work where the problem is ambiguous and the stakes are measurable.</h2>
+      <figure class="about-figure">
+        <img src="img/index-about-me.jpg" alt="" width="1920" height="1920" loading="lazy" />
+      </figure>
       <div class="about-bio">
-        <h2>I work where the problem is ambiguous and the stakes are measurable.</h2>
-        <p>I'm a product designer with 10+ years across B2B SaaS, AI, and enterprise. I take work from research and product strategy through interaction design to dev handoff, and I'm most useful early, when the problem isn't defined yet and someone has to turn data, stakeholders, and user pain into something that ships.</p>
-        <p>At Tailwind I owned end-to-end design for a 0-to-1 product alongside the executive board. At Wolfram I reimagined Wolfram|Alpha for 2M+ users and built the design system behind it, cutting iteration time 33%. At Grainger I earned a design patent for an enterprise catalog system serving 3M+ users. I hold dual Master's degrees from RISD and Northwestern, and I work fluently across global, cross-functional teams.</p>
+        <p>I'm Tim, a product designer with 10+ years of experience working with international clients, startups, and established companies. Friends often joke that I should have become a therapist, and that's fair. Empathy is where my work starts. I'd rather sit with a user's problem until I really understand it than rush into a solution. The work I enjoy most is untangling complexity, turning pain points into clear design direction, and balancing user needs with technical constraints and business goals.</p>
+        <p>I find a lot of joy in creating those "aha" moments when something confusing finally feels clear. My strength is working in the messy middle between what users want, what the business needs, and what teams can realistically build, then turning that tension into thoughtful, useful design. I care about work that brings clarity, holds up in the details, and leads to outcomes people can actually feel.</p>
       </div>
     </div>
   </div>
@@ -207,8 +201,7 @@ section.block{padding:88px 0}
 
 <section class="cta" id="contact">
   <div class="wrap">
-    <h2>Looking for a senior designer who ships measurable outcomes?</h2>
-    <p>Open to senior product design roles, remote-friendly and across the UK, Taiwan, and the US.</p>
+    <h2>Looking for a designer who's useful before the problem is defined?</h2>
     <div class="cta-actions">
       <a href="mailto:tim.hsieh.design@gmail.com" class="btn btn-primary">Email me →</a>
       <a href="Tim_Hsieh_ProductDesigner_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download resume</a>
