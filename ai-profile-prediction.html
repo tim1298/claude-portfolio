@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AI Customer Profile Prediction — Tim Hsieh</title>
-<meta name="description" content="An AI marketing-intelligence tool that turns complex user data into trustworthy, actionable segments through human-in-the-loop validation. 5x faster segmentation, +75% targeting precision." />
+<meta name="description" content="An AI MarTech tool that turns messy user data into segments marketers can actually trust, through human-in-the-loop validation. Time-to-segmentation cut from days to minutes." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -32,13 +32,13 @@
     <a href="index.html#work" class="cs-back">← All work</a>
     <div class="cs-kicker">Confidential client · AI / MarTech</div>
     <h1>AI Customer Profile Prediction</h1>
-    <p class="sub">An AI-powered MarTech tool that turns complex user data into actionable marketing insights</p>
+    <p class="sub">An AI-powered MarTech tool that turns complex user data into marketing segments teams can actually act on, and trust.</p>
   </div>
 </section>
 
 <figure class="cs-fig-wide">
   <img src="img/ai-cover.png" alt="Profile prediction dashboard with projected value distributions and sample user cards" />
-  <figcaption>The shipped product: a profile-prediction dashboard where marketers define an attribute, review AI predictions, and project segment size across the entire user base.</figcaption>
+  <figcaption>The shipped product: marketers define an attribute, review predictions one at a time, and project segment size across the whole user base before applying it.</figcaption>
 </figure>
 
 <div class="wrap">
@@ -67,13 +67,13 @@
   <div class="cs-body">
     <div class="eyebrow-sm">Context</div>
     <h2>The opportunity, and the catch</h2>
-    <p>This project was created at a large-scale AI MarTech company serving enterprise marketing teams.</p>
-    <p>Marketers want to target audiences based on nuanced behaviors, preferences, and intent. But analyzing individual attributes across millions of site visitors is nearly impossible to do manually.</p>
-    <p>AI could help, but existing tools often created a different problem: marketers did not know whether they could trust the output.</p>
+    <p>This was built at a large AI MarTech company serving enterprise marketing teams.</p>
+    <p>Marketers want to target people by real behavior, preference, and intent. Doing that by hand across millions of visitors isn't realistic.</p>
+    <p>AI can close that gap, but most tools traded one problem for another: marketers couldn't tell whether the output was worth trusting.</p>
     <ul class="painlist">
-      <li><strong>Opaque</strong> — AI predictions were hard to explain</li>
-      <li><strong>Unverifiable</strong> — no clear way to test, correct, or override results</li>
-      <li><strong>Risky</strong> — costly to apply at scale without confidence in accuracy</li>
+      <li><strong>Opaque</strong> the predictions were hard to explain</li>
+      <li><strong>Unverifiable</strong> no clear way to test, correct, or override them</li>
+      <li><strong>Risky</strong> expensive to act on at scale without confidence in the accuracy</li>
     </ul>
   </div>
 </section>
@@ -81,23 +81,23 @@
 <section class="cs-section tight">
   <div class="cs-body">
     <div class="eyebrow-sm">Problem</div>
-    <h2>A "look what we can do" prototype, not yet a product</h2>
-    <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px"><img src="img/icon-launch.png" alt="" style="width:120px;height:120px;flex-shrink:0" /><p style="margin:0">Before I joined, the team had built a simulation tool that generated real-time attribute predictions, such as demographics, hobbies, and brand preferences, based on a tester's own browsing behavior.</p></div>
-    <p>The technology was impressive, but the use case was limited.</p>
+    <h2>A "look what we can do" demo, not yet a product</h2>
+    <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px"><img src="img/icon-launch.png" alt="" style="width:120px;height:120px;flex-shrink:0" /><p style="margin:0">Before I joined, the team had built a simulation that generated live attribute predictions, demographics, hobbies, brand preferences, off a tester's own browsing.</p></div>
+    <p>The tech was genuinely impressive. The use case wasn't.</p>
     <ul class="painlist">
-      <li>Insights came from biased simulations, not real customer behavior</li>
-      <li>There was no practical workflow beyond demonstrating technical capability</li>
-      <li>The output was interesting, but not something marketers could confidently act on</li>
+      <li>The insights came from biased simulations, not real customer behavior</li>
+      <li>There was no workflow beyond showing off what the model could do</li>
+      <li>The output was interesting, but not something a marketer could act on with confidence</li>
     </ul>
-    <p>The product needed to shift from a technical showcase to a real marketing intelligence tool.</p>
+    <p style="margin-top:18px">It needed to become an actual marketing tool, not a tech demo.</p>
   </div>
 </section>
 
 <section class="cs-section tight">
   <div class="cs-body">
     <div class="eyebrow-sm">Goal</div>
-    <p>Create an intuitive AI workflow that helps marketers define user attributes, review and correct LLM-generated predictions, understand how predictions are made, and confidently apply those insights across a large audience.</p>
-    <p>The goal was not just faster segmentation. It was building long-term trust in AI-powered decision-making.</p>
+    <p>Build a workflow that lets marketers define an attribute, review and correct the model's predictions, see how each one was reached, and then apply it across a large audience with confidence.</p>
+    <p>The point wasn't just faster segmentation. It was earning enough trust that marketers would actually rely on AI to make a call.</p>
   </div>
 </section>
 
@@ -107,55 +107,55 @@
     <h2>A human-in-the-loop prediction workflow</h2>
     <div class="step">
       <div class="si">01</div>
-      <div><h3>Define the attribute</h3><p>Marketers start by defining what they want to learn about their customers, such as a user's preferred TV display technology.</p></div>
+      <div><h3>Define the attribute</h3><p>Marketers start by defining what they want to learn, say, which TV display technology a user is most likely to prefer.</p></div>
     </div>
   </div>
   <figure class="cs-fig-wide">
     <img src="img/ai-define.png" alt="Define attribute screen: naming the attribute, setting values, and previewing predictions" />
-    <figcaption>Step 1, defining the attribute and its expected values, with a live path to preview predictions before committing.</figcaption>
+    <figcaption>Step 1: define the attribute and its expected values, with a way to preview predictions before committing.</figcaption>
   </figure>
   <div class="cs-body">
     <div class="step">
       <div class="si">02</div>
-      <div><h3>Review sample predictions</h3><p>They review a curated set of real user profiles with predicted values, confidence scores, and plain-language explanations. This helps them test accuracy, give feedback, and refine the model before applying it at scale.</p></div>
+      <div><h3>Review sample predictions</h3><p>They review a set of real user profiles with predicted values, confidence scores, and plain-language explanations. This is where they test accuracy, give feedback, and tune the model before it goes wide.</p></div>
     </div>
   </div>
   <figure class="cs-fig-wide">
     <img src="img/ai-review-cards.png" alt="Sample prediction cards showing predicted attribute, confidence score, explanation, and thumbs feedback" />
-    <figcaption>Step 2, one user card at a time: predicted value, confidence score, a plain-language explanation, and a thumbs up/down that feeds back into the model.</figcaption>
+    <figcaption>Step 2: one card at a time: the predicted value, a confidence score, a plain-language why, and a thumbs up/down that feeds back into the model.</figcaption>
   </figure>
   <div class="cs-body">
     <div class="step">
       <div class="si">03</div>
-      <div><h3>View distribution and apply</h3><p>Once the prediction logic is refined, the system projects how the attribute is distributed across the full user base. Marketers can then assess segment potential and apply the attribute to targeted campaigns, such as promoting OLED TVs to users most likely to prefer them.</p></div>
+      <div><h3>View distribution and apply</h3><p>Once the logic is tuned, the system projects the attribute across the full user base. Marketers can size the segment and apply it to a campaign, like promoting OLED TVs to the people most likely to want them.</p></div>
     </div>
   </div>
 </section>
 
 <figure class="cs-fig-wide">
     <img src="img/ai-segmentation.png" alt="Site-wide projected value distribution across the full user base, ready to apply as a segment" />
-    <figcaption>Step 3, the refined attribute projected across the entire user base, then applied directly as a targetable segment.</figcaption>
+    <figcaption>Step 3: the tuned attribute projected across the whole user base, then applied directly as a targetable segment.</figcaption>
   </figure>
 
 <section class="cs-section">
   <div class="cs-body">
     <div class="eyebrow-sm">Approach</div>
-    <h2>Redefine the problem before designing the screens</h2>
+    <h2>Redefine the problem before designing any screens</h2>
     <div class="pillars">
       <div class="pillar">
         <img src="img/icon-ideation.png" alt="" />
         <h3>Redefine the problem</h3>
-        <p>I challenged the assumption that "simulation" was the core experience. Through workshops and cross-functional discussions, I helped redirect the team toward generating user attributes from real behavioral data.</p>
+        <p>I pushed back on the assumption that "simulation" was the experience. Through workshops and cross-functional sessions, I helped steer the team toward generating attributes from real behavioral data instead.</p>
       </div>
       <div class="pillar">
         <img src="img/icon-growth.png" alt="" />
         <h3>Create strategic value</h3>
-        <p>That reframing turned a stagnant sandbox feature into a scalable marketing intelligence workflow, from attribute definition to prediction refinement to audience segmentation.</p>
+        <p>That reframe turned a stalled sandbox feature into a real workflow: define an attribute, tune the prediction, segment the audience.</p>
       </div>
       <div class="pillar">
         <img src="img/icon-collaboration.png" alt="" />
         <h3>Align and mentor the team</h3>
-        <p>I bridged PM, engineering, AI research, and UX around a shared product direction. I also mentored junior designers through information architecture, interaction patterns, and stakeholder communication.</p>
+        <p>I got PM, engineering, AI research, and UX pointed at one product direction, and mentored the junior designers through IA, interaction patterns, and stakeholder conversations.</p>
       </div>
     </div>
   </div>
@@ -163,7 +163,7 @@
 
 <figure class="cs-fig-wide">
     <img src="img/ai-flow.png" alt="End-to-end flow from tag creation and prediction refinement to site-wide projection" />
-    <figcaption>The workflow I mapped: tag creation and prediction refinement on the left, site-wide projection and confident application on the right.</figcaption>
+    <figcaption>The workflow I mapped: tag creation and prediction tuning on the left, site-wide projection and confident application on the right.</figcaption>
   </figure>
 
 <section class="cs-section">
@@ -173,30 +173,30 @@
 
     <div class="challenge">
       <div class="num">Challenge 01</div>
-      <h3>How do we make the AI workflow intuitive?</h3>
-      <p>I streamlined the attribute creation process, automated value generation, supported CSV uploads, and combined setup with real-time prediction examples so the workflow became easier to learn as users moved through it.</p>
+      <h3>Making the workflow easy to pick up</h3>
+      <p>I streamlined attribute creation, automated value generation, added CSV upload, and paired setup with live prediction examples, so the workflow taught itself as marketers moved through it.</p>
     </div>
   </div>
   <figure class="cs-fig-wide prediction-challenge-one-media">
     <img src="img/ai-sidepanel.png" alt="Iteration on the side-panel layout for defining an attribute and previewing predictions" />
-    <figcaption>One of several interaction patterns we iterated with junior designers, refining how the define-and-preview side panel guides a marketer through the flow.</figcaption>
+    <figcaption>One of several patterns we iterated on with the junior designers: how the define-and-preview side panel walks a marketer through the flow.</figcaption>
   </figure>
   <div class="cs-body">
     <div class="challenge">
       <div class="num">Challenge 02</div>
-      <h3>How do we help marketers trust AI predictions?</h3>
-      <p>I surfaced confidence scores, explanations, and live preview examples so marketers could understand how predictions were generated before applying them to a wider audience.</p>
+      <h3>Getting marketers to trust the predictions</h3>
+      <p>I surfaced confidence scores, explanations, and live previews so marketers could see how a prediction was reached before betting a campaign on it.</p>
     </div>
   </div>
   <figure class="cs-fig-wide">
     <img src="img/ai-realtime-test.png" alt="Real-time tagging extension predicting attributes live as a user browses a retail site" />
-    <figcaption>The live preview: a real-time tagging panel predicts attributes as a user browses, so marketers can watch the model reason on a real site before trusting it at scale.</figcaption>
+    <figcaption>The live preview: a real-time panel predicts attributes as a user browses, so marketers can watch the model reason on a real site before trusting it at scale.</figcaption>
   </figure>
   <div class="cs-body">
     <div class="challenge">
       <div class="num">Challenge 03</div>
-      <h3>How do we encourage feedback without making the workflow feel demanding?</h3>
-      <p>I reduced information overload by showing one user card at a time and made feedback actions clear and lightweight, helping users improve prediction accuracy without slowing them down.</p>
+      <h3>Getting feedback without making it feel like work</h3>
+      <p>I cut the overload by showing one card at a time, and kept the feedback actions light, so marketers could improve accuracy without it becoming a chore.</p>
     </div>
   </div>
   <figure class="cs-fig-wide prediction-challenge-three-media">
@@ -209,18 +209,18 @@
     <div>
       <div class="eyebrow-sm">Assumptions tested</div>
       <ul class="winlist">
-        <li>What helps marketers trust AI predictions at first glance?</li>
-        <li>Which data points are most useful for verifying prediction accuracy?</li>
-        <li>Are random or filtered demographic previews more useful for evaluation?</li>
+        <li>What makes a marketer trust a prediction on first look?</li>
+        <li>Which data points actually help them verify accuracy?</li>
+        <li>Random previews or filtered demographic ones, which is more useful for evaluation?</li>
       </ul>
     </div>
     <div>
       <div class="eyebrow-sm">Results</div>
       <ul class="winlist">
-        <li>Established trust in AI tagging workflows</li>
-        <li>Reduced time-to-segmentation from days to minutes</li>
-        <li>Introduced a flexible system that is scalable and auditable</li>
-        <li>Helped marketers apply AI-generated insights with more confidence and control</li>
+        <li>Built trust in the AI tagging workflow</li>
+        <li>Cut time-to-segmentation from days to minutes</li>
+        <li>Delivered a system that's flexible, scalable, and auditable</li>
+        <li>Helped marketers apply AI insights with more confidence and control</li>
       </ul>
     </div>
   </div>
@@ -230,8 +230,8 @@
   <div class="cs-body">
     <div class="takeaway">
       <div class="eyebrow-sm">Takeaway</div>
-      <p>Building trust in AI takes more than accurate predictions. It requires transparency, control, and a clear way for humans to verify what the model is doing.</p>
-      <p>Keeping marketers in the loop did not just improve accuracy. It made the system easier to trust, adopt, and scale.</p>
+      <p>Trust in AI takes more than accurate predictions. It needs transparency, control, and a clear way for a person to check what the model is doing.</p>
+      <p>Keeping marketers in the loop didn't just make it more accurate. It made the whole thing easier to trust, adopt, and scale.</p>
     </div>
   </div>
 </section>
