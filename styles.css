@@ -526,3 +526,63 @@ figure.cs-fig-wide + figure.cs-fig-wide{margin-top:24px}
   .pillar img{width:52px;height:52px}
   .btn{padding:11px 20px;font-size:14px}
 }
+
+/* ============================================================
+   PHONE-ONLY (max-width:767px) — collapse case-study splits
+   Several .cs-row blocks (and the copilot flex pairs) carry INLINE
+   grid-template-columns / flex values in the HTML, e.g.
+   65fr 35fr, 3fr 7fr, 35fr 65fr, 4fr 1fr. Inline styles outrank the
+   plain-selector collapse rules in the ≤860px block, so the desktop
+   side-by-side split survives on phones and the text column becomes
+   unreadably narrow. !important is the only way to override an inline
+   style from the stylesheet; this block is scoped to ≤767px so tablet
+   (≥768px) and desktop layouts are left exactly as they are today.
+   ============================================================ */
+@media(max-width:767px){
+  /* two-column editorial rows — incl. inline-styled variants */
+  .cs-row,
+  .cs-row.product,
+  .cs-row.flip,
+  .cs-row.img-right,
+  .cs-row.media-70,
+  .cs-row.media-80{
+    grid-template-columns:1fr !important;
+  }
+  .cs-row-copy,
+  .cs-row-media{min-width:0;width:100%;max-width:100%}
+  /* media leads the stacked copy (matches existing ≤860 behavior) */
+  .cs-row .cs-row-media{order:-1}
+
+  /* paired feature rows (7fr / 3fr) */
+  .feature-row,
+  .feature-row.reverse{grid-template-columns:1fr !important}
+  .feature-media,
+  .feature-copy{min-width:0;width:100%;max-width:100%}
+
+  /* side-by-side figure / results grids */
+  .fig-pair,
+  .prediction-validation-results-grid{grid-template-columns:1fr !important}
+
+  /* copilot flex pairs — items carry inline flex:NNN, override it */
+  .copilot-challenge-image-pair,
+  .copilot-challenge-evolution{flex-direction:column !important}
+  .copilot-challenge-image-pair__item,
+  .copilot-challenge-evolution__item{flex:none !important;width:100% !important;max-width:100%;min-width:0}
+  .copilot-challenge-evolution--stacked .copilot-challenge-evolution__item--centered-half{width:100% !important;align-self:stretch}
+
+  /* fixed-percentage figures */
+  figure.prediction-challenge-one-media,
+  figure.prediction-challenge-three-media{width:100% !important;max-width:100% !important}
+
+  /* stacked media never overflows its column */
+  .cs-row-media img,
+  .feature-phone,
+  .fig-pair img{max-width:100%;height:auto;object-fit:contain}
+
+  /* guard against horizontal overflow on the split containers */
+  .cs-row,
+  .feature-row,
+  .fig-pair,
+  .copilot-challenge-image-pair,
+  .copilot-challenge-evolution{overflow-x:hidden}
+}
