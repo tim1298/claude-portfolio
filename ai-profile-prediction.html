@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AI Customer Profile Prediction — Tim Hsieh</title>
 <meta name="description" content="An AI MarTech tool that turns messy user data into segments marketers can actually trust, through human-in-the-loop validation. Time-to-segmentation cut from days to minutes." />
+<meta name="theme-color" content="#FAFAF7" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,8 +18,7 @@
     <nav class="nav-links" id="navLinks">
       <a href="index.html#work">Work</a>
       <a href="index.html#about">About</a>
-      <a href="Tim_Hsieh_ProductDesigner_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+      <a href="index.html#contact" class="nav-cta">Let's talk</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu">
       <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><rect width="20" height="2" rx="1" fill="currentColor"/><rect y="6" width="20" height="2" rx="1" fill="currentColor"/><rect y="12" width="20" height="2" rx="1" fill="currentColor"/></svg>
@@ -29,7 +29,7 @@
 <main>
 <section class="cs-hero">
   <div class="read">
-    <a href="index.html#work" class="cs-back">← All work</a>
+    <a href="index.html#work" class="cs-back"><span class="ba">←</span> All work</a>
     <div class="cs-kicker">Confidential client · AI / MarTech</div>
     <h1>AI Customer Profile Prediction</h1>
     <p class="sub">An AI-powered MarTech tool that turns complex user data into marketing segments teams can actually act on, and trust.</p>
@@ -37,7 +37,7 @@
 </section>
 
 <figure class="cs-fig-wide">
-  <img src="img/ai-cover.png" alt="Profile prediction dashboard with projected value distributions and sample user cards" />
+  <img src="img/ai-cover.png" alt="Profile prediction dashboard with projected value distributions and sample user cards" width="1672" height="941" fetchpriority="high" />
   <figcaption>The shipped product: marketers define an attribute, review predictions one at a time, and project segment size across the whole user base before applying it.</figcaption>
 </figure>
 
@@ -65,24 +65,24 @@
 
 <section class="cs-section">
   <div class="cs-body">
-    <div class="eyebrow-sm">Context</div>
+    <div class="eyebrow-sm"><span class="sn">01</span>Context</div>
     <h2>The opportunity, and the catch</h2>
     <p>This was built at a large AI MarTech company serving enterprise marketing teams.</p>
     <p>Marketers want to target people by real behavior, preference, and intent. Doing that by hand across millions of visitors isn't realistic.</p>
     <p>AI can close that gap, but most tools traded one problem for another: marketers couldn't tell whether the output was worth trusting.</p>
     <ul class="painlist">
-      <li><strong>Opaque</strong> the predictions were hard to explain</li>
-      <li><strong>Unverifiable</strong> no clear way to test, correct, or override them</li>
-      <li><strong>Risky</strong> expensive to act on at scale without confidence in the accuracy</li>
+      <li><strong>Opaque:</strong> the predictions were hard to explain</li>
+      <li><strong>Unverifiable:</strong> no clear way to test, correct, or override them</li>
+      <li><strong>Risky:</strong> expensive to act on at scale without confidence in the accuracy</li>
     </ul>
   </div>
 </section>
 
 <section class="cs-section tight">
   <div class="cs-body">
-    <div class="eyebrow-sm">Problem</div>
+    <div class="eyebrow-sm"><span class="sn">02</span>Problem</div>
     <h2>A "look what we can do" demo, not yet a product</h2>
-    <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px"><img src="img/icon-launch.png" alt="" style="width:120px;height:120px;flex-shrink:0" /><p style="margin:0">Before I joined, the team had built a simulation that generated live attribute predictions, demographics, hobbies, brand preferences, off a tester's own browsing.</p></div>
+    <p>Before I joined, the team had built a simulation that generated live attribute predictions, demographics, hobbies, brand preferences, off a tester's own browsing.</p>
     <p>The tech was genuinely impressive. The use case wasn't.</p>
     <ul class="painlist">
       <li>The insights came from biased simulations, not real customer behavior</li>
@@ -95,15 +95,17 @@
 
 <section class="cs-section tight">
   <div class="cs-body">
-    <div class="eyebrow-sm">Goal</div>
-    <p>Build a workflow that lets marketers define an attribute, review and correct the model's predictions, see how each one was reached, and then apply it across a large audience with confidence.</p>
-    <p>The point wasn't just faster segmentation. It was earning enough trust that marketers would actually rely on AI to make a call.</p>
+    <div class="eyebrow-sm"><span class="sn">03</span>Goal</div>
+    <div class="goal-brief">
+      <p class="gq">Build a workflow that lets marketers define an attribute, review and correct the model's predictions, see how each one was reached, and then apply it across a large audience with confidence.</p>
+      <p>The point wasn't just faster segmentation. It was earning enough trust that marketers would actually rely on AI to make a call.</p>
+    </div>
   </div>
 </section>
 
 <section class="cs-section">
   <div class="cs-body">
-    <div class="eyebrow-sm">How it works</div>
+    <div class="eyebrow-sm"><span class="sn">04</span>How it works</div>
     <h2>A human-in-the-loop prediction workflow</h2>
     <div class="step">
       <div class="si">01</div>
@@ -111,7 +113,7 @@
     </div>
   </div>
   <figure class="cs-fig-wide">
-    <img src="img/ai-define.png" alt="Define attribute screen: naming the attribute, setting values, and previewing predictions" />
+    <img src="img/ai-define.png" alt="Define attribute screen: naming the attribute, setting values, and previewing predictions" width="2072" height="1268" loading="lazy" decoding="async" />
     <figcaption>Step 1: define the attribute and its expected values, with a way to preview predictions before committing.</figcaption>
   </figure>
   <div class="cs-body">
@@ -121,7 +123,7 @@
     </div>
   </div>
   <figure class="cs-fig-wide">
-    <img src="img/ai-review-cards.png" alt="Sample prediction cards showing predicted attribute, confidence score, explanation, and thumbs feedback" />
+    <img src="img/ai-review-cards.png" alt="Sample prediction cards showing predicted attribute, confidence score, explanation, and thumbs feedback" width="1843" height="783" loading="lazy" decoding="async" />
     <figcaption>Step 2: one card at a time: the predicted value, a confidence score, a plain-language why, and a thumbs up/down that feeds back into the model.</figcaption>
   </figure>
   <div class="cs-body">
@@ -130,45 +132,43 @@
       <div><h3>View distribution and apply</h3><p>Once the logic is tuned, the system projects the attribute across the full user base. Marketers can size the segment and apply it to a campaign, like promoting OLED TVs to the people most likely to want them.</p></div>
     </div>
   </div>
-</section>
-
-<figure class="cs-fig-wide">
-    <img src="img/ai-segmentation.png" alt="Site-wide projected value distribution across the full user base, ready to apply as a segment" />
+  <figure class="cs-fig-wide">
+    <img src="img/ai-segmentation.png" alt="Site-wide projected value distribution across the full user base, ready to apply as a segment" width="2309" height="1099" loading="lazy" decoding="async" />
     <figcaption>Step 3: the tuned attribute projected across the whole user base, then applied directly as a targetable segment.</figcaption>
   </figure>
+</section>
 
 <section class="cs-section">
   <div class="cs-body">
-    <div class="eyebrow-sm">Approach</div>
+    <div class="eyebrow-sm"><span class="sn">05</span>Approach</div>
     <h2>Redefine the problem before designing any screens</h2>
     <div class="pillars">
       <div class="pillar">
-        <img src="img/icon-ideation.png" alt="" />
+        <img src="img/icon-ideation.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
         <h3>Redefine the problem</h3>
         <p>I pushed back on the assumption that "simulation" was the experience. Through workshops and cross-functional sessions, I helped steer the team toward generating attributes from real behavioral data instead.</p>
       </div>
       <div class="pillar">
-        <img src="img/icon-growth.png" alt="" />
+        <img src="img/icon-growth.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
         <h3>Create strategic value</h3>
         <p>That reframe turned a stalled sandbox feature into a real workflow: define an attribute, tune the prediction, segment the audience.</p>
       </div>
       <div class="pillar">
-        <img src="img/icon-collaboration.png" alt="" />
+        <img src="img/icon-collaboration.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />
         <h3>Align and mentor the team</h3>
         <p>I got PM, engineering, AI research, and UX pointed at one product direction, and mentored the junior designers through IA, interaction patterns, and stakeholder conversations.</p>
       </div>
     </div>
   </div>
-</section>
-
-<figure class="cs-fig-wide">
-    <img src="img/ai-flow.png" alt="End-to-end flow from tag creation and prediction refinement to site-wide projection" />
+  <figure class="cs-fig-wide">
+    <img src="img/ai-flow.png" alt="End-to-end flow from tag creation and prediction refinement to site-wide projection" width="2048" height="853" loading="lazy" decoding="async" />
     <figcaption>The workflow I mapped: tag creation and prediction tuning on the left, site-wide projection and confident application on the right.</figcaption>
   </figure>
+</section>
 
 <section class="cs-section">
   <div class="cs-body">
-    <div class="eyebrow-sm">UX challenges</div>
+    <div class="eyebrow-sm"><span class="sn">06</span>UX challenges</div>
     <h2>Designing for trust in AI</h2>
 
     <div class="challenge">
@@ -178,7 +178,7 @@
     </div>
   </div>
   <figure class="cs-fig-wide prediction-challenge-one-media">
-    <img src="img/ai-sidepanel.png" alt="Iteration on the side-panel layout for defining an attribute and previewing predictions" />
+    <img src="img/ai-sidepanel.png" alt="Iteration on the side-panel layout for defining an attribute and previewing predictions" width="983" height="760" loading="lazy" decoding="async" />
     <figcaption>One of several patterns we iterated on with the junior designers: how the define-and-preview side panel walks a marketer through the flow.</figcaption>
   </figure>
   <div class="cs-body">
@@ -189,7 +189,7 @@
     </div>
   </div>
   <figure class="cs-fig-wide">
-    <img src="img/ai-realtime-test.png" alt="Real-time tagging extension predicting attributes live as a user browses a retail site" />
+    <img src="img/ai-realtime-test.png" alt="Real-time tagging extension predicting attributes live as a user browses a retail site" width="2866" height="1561" loading="lazy" decoding="async" />
     <figcaption>The live preview: a real-time panel predicts attributes as a user browses, so marketers can watch the model reason on a real site before trusting it at scale.</figcaption>
   </figure>
   <div class="cs-body">
@@ -200,14 +200,15 @@
     </div>
   </div>
   <figure class="cs-fig-wide prediction-challenge-three-media">
-    <img src="img/ai-sample-process.png" alt="" />
+    <img src="img/ai-sample-process.png" alt="Before and after of the review flow: the original dense multi-card grid next to the redesigned one-card-at-a-time review with plain-language explanations" width="2673" height="2631" loading="lazy" decoding="async" />
+    <figcaption>Before and after: the original flow reviewed predictions in a dense grid; the redesign walks through one card at a time with a plain-language why and one-tap feedback.</figcaption>
   </figure>
 </section>
 
 <section class="cs-section tight">
   <div class="prediction-validation-results-grid">
     <div>
-      <div class="eyebrow-sm">Assumptions tested</div>
+      <div class="eyebrow-sm"><span class="sn">07</span>Assumptions tested</div>
       <ul class="winlist">
         <li>What makes a marketer trust a prediction on first look?</li>
         <li>Which data points actually help them verify accuracy?</li>
@@ -215,7 +216,7 @@
       </ul>
     </div>
     <div>
-      <div class="eyebrow-sm">Results</div>
+      <div class="eyebrow-sm"><span class="sn">08</span>Results</div>
       <ul class="winlist">
         <li>Built trust in the AI tagging workflow</li>
         <li>Cut time-to-segmentation from days to minutes</li>
@@ -242,7 +243,7 @@
     <a href="kidsync.html">
       <div>
         <div class="lab">Next project</div>
-        <div class="ttl">Kidsync →</div>
+        <div class="ttl">Kidsync <span class="arr">→</span></div>
       </div>
     </a>
   </div>
@@ -254,7 +255,6 @@
     <div class="foot-links">
       <a href="mailto:tim.hsieh.design@gmail.com">Email</a>
       <a href="https://linkedin.com/in/timhdesign" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="Tim_Hsieh_ProductDesigner_Resume.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </div>
 </footer>
